@@ -37,7 +37,7 @@
     height: 64px;
     width: 64px;
     margin-top: 12px;
-    float: left;
+
     margin-right: 10px;
     display: inline-block;
 }
@@ -51,9 +51,5 @@
     line-height: 1;
 }
 .Weather .sweet-loading {
-    loading: true;
     color: "#000000";
-    cssoverride: {
-    }
-    speedmultiplier: 1;
 }
