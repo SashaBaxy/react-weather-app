@@ -50,3 +50,10 @@
 
     line-height: 1;
 }
+.Weather .sweet-loading {
+    loading: true;
+    color: "#000000";
+    cssoverride: {
+    }
+    speedmultiplier: 1;
+}
