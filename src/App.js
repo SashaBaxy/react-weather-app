@@ -12,7 +12,7 @@ export default function App() {
                     <a
                         href="https://www.linkedin.com/in/sasha-baxendale/"
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                     >
                         {" "}
                         Sasha Baxendale
@@ -21,7 +21,7 @@ export default function App() {
                     <a
                         href="https://github.com/SashaBaxy/react-weather-app-complete"
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                     >
                         Open-sourced on GitHub
                     </a>
