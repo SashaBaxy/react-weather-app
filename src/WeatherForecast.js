@@ -4,7 +4,7 @@ import "./WeatherForecast.css";
 import Axios from "axios";
 
 export default function WeatherForecast(props) {
-    let [loaded, setLoaded] = useState(true);
+    let [loaded, setLoaded] = useState(false);
     let [forecast, setForecast] = useState(null);
 
     function handleResponse(response) {
@@ -13,6 +13,7 @@ export default function WeatherForecast(props) {
     }
 
     if (loaded) {
+        console.log(forecast);
         return (
             <div className="WeatherForecast">
                 <div className="row">
@@ -21,10 +22,10 @@ export default function WeatherForecast(props) {
                         <WeatherIcon code="01d" size={36} />
                         <div className="WeatherForecast-temperature">
                             <span className="WeatherForecast-temperature-max">
-                                19°
+                                {forecast[0].temp.max}°
                             </span>{" "}
                             <span className="WeatherForecast-temperature-min">
-                                10°
+                                {forecast[0].temp.min}°
                             </span>
                         </div>
                     </div>
@@ -32,7 +33,7 @@ export default function WeatherForecast(props) {
             </div>
         );
     } else {
-        let apiKey = "b38034b76f133ca05fd67538c5b8c748";
+        let apiKey = "ca0db41e2e878c74a1dfc7ffece370d4";
         let longitude = props.coordinates.lon;
         let latitude = props.coordinates.lat;
         let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
